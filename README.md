@@ -1,5 +1,7 @@
 # Title : Correlation between rates of road accident in Cologne and with respect to bicycle traffic data in Cologne
 
+# Description:
+
 In Cologne biking is always a preferred mode of environmentally friendly transportation.We see an increase in the bicycle traffic in Cologne as well as road accident.The project examines the link between the rise in accidents and vehicle counting with value in Cologne.The aim is to gradually include all routes in the main road network.
 
 This template project provides some structure for your open data project in the MADE module at FAU.
