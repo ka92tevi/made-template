@@ -7,49 +7,42 @@ Rituparna_M-A-D-E_Project
 ## Main Question
 
 <!-- Think about one main question you want to answer based on the data. -->
-1. Does the analysis help to do correlate rate of road accident in Cologne and vehicle counting points with values in Cologne
+1. Is there a statistically significant correlation between GDP per capita and the annual unemployment rate across European countries from 2017 to 2021?
 
 ## Description
 
 <!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. -->
-The project examines the link between the rise in accidents and vehicle counting with value in Cologne.The aim is to gradually include all routes in the main road network. Routes without values ​​were not counted from 2010 to 2016.
+Correlating the GDP per capita and the annual unemployment rate per thousand for European countries between 2017-2021 can provide insights into the economic dynamics of these countries during the specified time period. The correlation analysis aims to understand the potential relationship between the economic prosperity, as measured by GDP per capita, and the labor market conditions, as reflected in the annual unemployment rate.
 
-This data set contains the surveys from the automatic counting points for Cologne's cycling traffic from 2009.With the activation of a website for the permanent counting points, we are offering this service for the first time.
+A positive correlation might suggest that as GDP per capita increases,indicating economic growth, the unemployment rate tends to decrease.This could imply that a stronger economy is generally associated with lower unemployment rates. Conversely, a negative correlation might suggest that economic struggles are associated with higher unemployment rates.
 
 
 ## Datasources
 
 <!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
 
-### Datasource 1: Mobilithek
-* Metadata URL 1: https://mobilithek.info/offers/-7344603824143622751
-* Data URL 1:  https://offenedaten-koeln.de/sites/default/files/KFZ_Zaheldaten_2016-2019_node.csv
-* Data Type: CSV Vehicle counting points and values ​​Cologne
+### Datasource 1: kaggle.com
+* Metadata URL 1: https://www.macrotrends.net/countries/ranking/gdp-gross-domestic-product
+* Data URL 1:  https://www.kaggle.com/datasets/samuelcortinhas/gdp-of-european-countries?select=GDP_per_capita_table.csv
+* Data Type:   CSV  GDP per capita for several European countries between 2017-2021
   
 
-### Datasource 2: European Data Portal
-* Metadata URL 2: https://data.europa.eu/data/datasets/70dd472a-dce0-401c-bb3e-5322d626e1f0?locale=en
-* Data URL 2: https://offenedaten-koeln.de/dataset/unfallstatistik-k%C3%B6ln/resource/a32e0d4a-8a29-4b18-a49d-a9e1966c8c6f#{}
-* Data Type: CSV Accident statistics Cologne
+### Datasource 2: eurostat
+* Metadata URL 2: https://ec.europa.eu/eurostat/cache/metadata/en/lfsi_esms.htm
+* Data URL 2: https://ec.europa.eu/eurostat/databrowser/view/une_rt_a__custom_9447392/default/table?lang=en
+* Data Type: CSV    Annual unemployment rate per thousand
 
-
-### Datasource 3: Mobilithek
-* Metadata URL 3: https://mobilithek.info/offers/-4758259495105693759
-* Data URL 3: https://offenedaten-koeln.de/sites/default/files/Radverkehr%20f%C3%BCr%20Offene%20Daten%20K%C3%B6ln%202013.csv
-* Data Type: CSV Bicycle traffic data Cologne
-
-This projects tries to draw a connections between the rate of in bicycle traffic data Cologne from the data of vehicle counting point with the road accidents statistics in cologne .
 
 ## Work Packages
 
 <!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
 
-1. Extract Data from the two data sources
+1. Extract Data from the two datasets
 
 2. Create graph
 
-3. Draw Conclusion from the graphs
+3. Check correlation
 
-4. Calculate the occurence of accident statistics with bicycle traffic from graph
+4. Conclude with a result of the analysis
 
 
