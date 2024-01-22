@@ -1,8 +1,10 @@
-# Title : Correlation between rates of road accident in Cologne and with respect to bicycle traffic data in Cologne
+# Title : Correlation between GDP per capita and the annual unemployment rate across European countries
 
 # Description:
 
-In Cologne biking is always a preferred mode of environmentally friendly transportation.We see an increase in the bicycle traffic in Cologne as well as road accident.The project examines the link between the rise in accidents and vehicle counting with value in Cologne.The aim is to gradually include all routes in the main road network.
+Correlating the GDP per capita and the annual unemployment rate per thousand for European countries between 2017-2021 can provide insights into the economic dynamics of these countries during the specified time period. The correlation analysis aims to understand the potential relationship between the economic prosperity, as measured by GDP per capita, and the labor market conditions, as reflected in the annual unemployment rate.
+
+A positive correlation might suggest that as GDP per capita increases,indicating economic growth, the unemployment rate tends to decrease.This could imply that a stronger economy is generally associated with lower unemployment rates. Conversely, a negative correlation might suggest that economic struggles are associated with higher unemployment rates.
 
 This template project provides some structure for your open data project in the MADE module at FAU.
 This repository contains (a) a data science project that is developed by the student over the course of the semester, and (b) the exercises that are submitted over the course of the semester.
