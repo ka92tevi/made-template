@@ -1,3 +1,4 @@
+
 transform CelsToFahren {
   from tempCelsius oftype decimal;
   to tempFahrenheit oftype decimal;
@@ -13,7 +14,7 @@ pipeline TempPipeline{
     block CSVInterpreter oftype CSVInterpreter {enclosing: '"'; delimiter: ";";} 
     block MyColumnDeleter oftype ColumnDeleter { delete: [column F,column G,column H,column I]; }
     block ColSelector oftype CellRangeSelector {select: range A1:K*;}       
-   
+
     block DataInterpreter oftype TableInterpreter {
         header: false;
         columns: [
@@ -27,20 +28,21 @@ pipeline TempPipeline{
         ];
     }
 
- block CelsiusToFahrenheitTTransformer oftype TableTransformer {
-        inputColumn: 'Temperatur';
+    block CelsiusToFahrenheitTTransformer oftype TableTransformer {
+        inputColumns: ['Temperatur'];
         outputColumn: 'Temperatur';
         use: CelsToFahren;
     }
 
     block CelsiusToFahrenheitBTTransformer oftype TableTransformer {
-        inputColumn: 'Batterietemperatur';
+        inputColumns: ['Batterietemperatur'];
         outputColumn: 'Batterietemperatur';
         use: CelsToFahren;
     }
+
     block DatasetLoader oftype SQLiteLoader {
         table: "temperatures"; file: "./temperatures.sqlite";
-}
+    }
 
     FileExtractor
     ->ZipArchiveInterpreter            
@@ -53,4 +55,5 @@ pipeline TempPipeline{
     ->CelsiusToFahrenheitTTransformer
     ->CelsiusToFahrenheitBTTransformer
     ->DatasetLoader;
-}  
+}
+
