@@ -9,7 +9,7 @@ pipeline TempBaterry
 {
     block FileExtractor oftype HttpExtractor {url: "https://www.mowesta.com/data/measure/mowesta-dataset-20221107.zip"; }
     block ZipInterpreter oftype ArchiveInterpreter { archiveType: "zip";}
-    block DataPicker oftype FilePicker { path:"/data.csv";}
+    block DataPicker oftype FilePicker { path: "/data.csv";}
     
     block CSVInterpreter oftype CSVInterpreter {delimiter: ";"; }
     block TextInterpreter oftype TextFileInterpreter {}
