@@ -12,7 +12,7 @@ urllib.request.urlretrieve(zip, zip_path)
 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
     zip_ref.extract(filename)
 
-# Reshaping data - by using only columns : "stop_id", "stop_name", "stop_lat", "stop_lon", "zone_id"
+# Reshaping data
 
 columns = ["stop_id", "stop_name", "stop_lat", "stop_lon", "zone_id"]
 
@@ -21,16 +21,16 @@ df = pd.read_csv(filename, usecols=columns)
 # Filtering data
 df = df[df["zone_id"] == 2001]
 
-# Text validation for stop_name
+# Text validation 
 df["stop_name"] = df["stop_name"].astype(str)
 
-# Geographic coordinates validation for stop_lat and stop_lon
+# Geographic coordinates 
 valid_coord_range = (-90, 90)
 valid_lat_range = df["stop_lat"].between(*valid_coord_range)
 valid_lon_range = df["stop_lon"].between(*valid_coord_range)
 df = df[valid_lat_range & valid_lon_range]
 
-# Use fitting SQLite types & Write data into SQLite database
+# Writing data into SQLite database
 engine = create_engine('sqlite:///gtfs.sqlite')
 metadata = MetaData()
 stops_table = Table('stops', metadata,
